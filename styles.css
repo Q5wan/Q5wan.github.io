@@ -1,0 +1,101 @@
+body {
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    width: 100%;
+    position: relative; 
+}
+
+.header-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+}
+
+.nav-links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap; 
+}
+
+.nav-links a {
+    font-family: "Space Mono", "Courier New", monospace;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.center-title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-links-notmain {
+    position: absolute;
+    left: 20px; 
+}
+
+
+.nav-links-notmain a {
+    font-family: "Space Mono", "Courier New", monospace;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+}
+
+.contact-links a {
+    font-family: "Space Mono", "Courier New", monospace;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+p {
+    font-family: "Space Mono", "Courier New", monospace;
+    font-size: 15px;
+    color: black;
+}
+
+h1 {
+    font-family: "Space Mono", "Courier New", monospace;
+    font-size: 25px;
+    color: black;
+    margin: 0; /* Removes extra spacing */
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; 
+    }
+
+    .header-container img {
+        width: 100px;
+        height: 100px
+    }
+
+    .nav-links {
+        flex-direction: row; 
+        justify-content: flex-start; 
+        gap: 30px; 
+        flex-wrap: wrap; 
+    }
+
+    .nav-links a {
+        flex: 1 1 45%; 
+        text-align: center; 
+        margin: 5px 0;
+    }
+
+}
