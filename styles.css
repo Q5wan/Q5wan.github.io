@@ -1,17 +1,20 @@
 body {
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: auto; /* Prevent horizontal scrolling */
+    font-family: "Space Mono", "Courier New", monospace;
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
     background-color: #eeeeee;
     border-radius: 5px;
     width: 100%;
     position: relative; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
 
 .header-container img {
@@ -19,22 +22,30 @@ body {
     height: 100px;
     object-fit: cover;
     object-position: center;
-    border-radius: 5%;
+    border-radius: 5%; /* Square image */
 }
 
 .nav-links {
-    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
     display: flex;
     justify-content: center;
     gap: 40px;
-    flex-wrap: nowrap; 
+    flex-wrap: wrap; /* Allow wrapping to create a new row */
+    width: 100%;
 }
 
 .nav-links a {
-    font-family: "Space Mono", "Courier New", monospace;
-    font-size: 25px;
+    font-size: 23px;
     color: black;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #693aa3; /* Add color change on hover */
+    transform: scale(1.1); /* Slight zoom effect */
 }
 
 .center-title {
@@ -47,55 +58,97 @@ body {
     left: 20px; 
 }
 
-
 .nav-links-notmain a {
-    font-family: "Space Mono", "Courier New", monospace;
-    font-size: 17px;
+    font-size: 23px;
     color: black;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links-notmain a:hover {
+    color: #693aa3; /* Add color change on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.contact-links {
+    padding: 20px;
+    text-align: center;
 }
 
 .contact-links a {
-    font-family: "Space Mono", "Courier New", monospace;
-    font-size: 15px;
-    color: black;
+    font-size: 18px;
+    color: #44256a;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #9557e1;
+}
+
+.contact-links p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
 }
 
 p {
-    font-family: "Space Mono", "Courier New", monospace;
     font-size: 15px;
     color: black;
 }
 
 h1 {
-    font-family: "Space Mono", "Courier New", monospace;
-    font-size: 25px;
+    font-size: 27px;
     color: black;
-    margin: 0; /* Removes extra spacing */
+    margin: 0;
 }
 
+/* Responsive Design */
+
+/* On mobile screens, two rows for navigation links */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column; 
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .header-container img {
-        width: 100px;
-        height: 100px
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px; 
     }
 
     .nav-links {
-        flex-direction: row; 
-        justify-content: flex-start; 
-        gap: 30px; 
-        flex-wrap: wrap; 
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
     }
 
     .nav-links a {
-        flex: 1 1 45%; 
-        text-align: center; 
-        margin: 5px 0;
+        font-size: 20px;
+        flex: 1 1 45%; /* Allow the links to take up equal space */
+        text-align: center;
+    }
+}
+
+/* On very small screens (max-width: 480px), stack the links */
+@media (max-width: 480px) {
+    .header-container img {
+        width: 80px;
+        height: 80px;
     }
 
+    .nav-links a {
+        font-size: 20px;
+    }
+
+    .contact-links a {
+        font-size: 18px;
+    }
+
+    .contact-links p {
+        font-size: 18px;
+    }
+    
 }
