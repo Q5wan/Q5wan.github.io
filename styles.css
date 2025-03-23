@@ -2,6 +2,7 @@ body {
     height: 100%;
     overflow-x: auto; /* Prevent horizontal scrolling */
     font-family: "Space Mono", "Courier New", monospace;
+    font-weight: 400;
 }
 
 .header-container {
@@ -12,8 +13,6 @@ body {
     border-radius: 5px;
     width: 100%;
     position: relative; 
-    padding-top: 10px;
-    padding-bottom: 10px;
 
 }
 
@@ -22,7 +21,7 @@ body {
     height: 100px;
     object-fit: cover;
     object-position: center;
-    border-radius: 5%; /* Square image */
+    padding:  10px;
 }
 
 .nav-links {
@@ -53,11 +52,6 @@ body {
     text-align: center;
 }
 
-.nav-links-notmain {
-    position: absolute;
-    left: 20px; 
-}
-
 .nav-links-notmain a {
     font-size: 23px;
     color: black;
@@ -65,28 +59,45 @@ body {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.nav-links-notmain {
+    position: absolute;
+    left: 20px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+}
+
 .nav-links-notmain a:hover {
     color: #693aa3; /* Add color change on hover */
     transform: scale(1.1); /* Slight zoom effect */
 }
 
-.contact-links {
-    padding: 20px;
+.page-content {
+    padding: 10px;
+    padding-left: 200px;
+    padding-right: 200px;
     text-align: center;
 }
 
-.contact-links a {
+.page-content a {
     font-size: 18px;
-    color: #44256a;
+    color: #6050eb;
     text-decoration: none;
     transition: color 0.3s ease;
 }
+.page-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
 
-.contact-links a:hover {
+}
+
+.page-content a:hover {
     color: #9557e1;
 }
 
-.contact-links p {
+.page-content p {
     font-size: 18px;
     color: black;
     margin-bottom: 10px;
@@ -103,7 +114,67 @@ h1 {
     margin: 0;
 }
 
-/* Responsive Design */
+strong{
+
+    font-weight: 700;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-box {
+    width: 250px; /* Increased size */
+    height: 200px; /* Increased size */
+    background: #eeeeee;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none; /* Removes default link styling */
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.project-box img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.project-box p {
+    font-size: 23px; /* Slightly larger text */
+    margin-top: 12px;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+}
+.project-box P:hover {
+    color: #693aa3; /* Add color change on hover */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* On mobile screens, two rows for navigation links */
 @media (max-width: 768px) {
@@ -112,7 +183,12 @@ h1 {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-
+    .nav-links-notmain {
+        position: static; /* Prevents absolute positioning issues */
+        text-align: center;
+        margin-top: 10px;
+    }
+    
     .header-container img {
         width: 80px;
         height: 80px;
@@ -126,8 +202,15 @@ h1 {
     }
 
     .nav-links a {
-        font-size: 20px;
+        font-size: 23px;
         flex: 1 1 45%; /* Allow the links to take up equal space */
+        text-align: center;
+    }
+
+    .page-content {
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
         text-align: center;
     }
 }
@@ -140,15 +223,15 @@ h1 {
     }
 
     .nav-links a {
-        font-size: 20px;
+        font-size: 23px;
     }
 
     .contact-links a {
-        font-size: 18px;
+        font-size: 23px;
     }
 
     .contact-links p {
-        font-size: 18px;
+        font-size: 23px;
     }
     
 }
