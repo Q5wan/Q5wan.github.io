@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>555 Stylophone</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+</head>
+<body>
+    <div class="header-container">
+        <div class="nav-links-notmain">
+            <a href="../index.html">Back</a>
+        </div>
+        <div class="center-title">
+            <h1>555 Stylophone</h1>
+        </div>
+    </div>
+        
+    <div class="page-content">
+        <img src="stylophone.jpg" alt="555 Stylophone">
+        <p>I got intersted in this project after seeing  <a href="https://mitxela.com/projects/stylocard">this video</a> by Mitxela, his is a small buisness card version that uses the analog-to-digital converter of the ATtiny85 and sends this information via MIDI over USB.
+        <br><br>
+        However, I wanted to do something analog and full sized, I decided
+        to use a 555 timer to generate the signals and after looking online I found <a href="https://www.instructables.com/A-Stylophone/">this atricle</a> by drj113, he had wired the 555 up as shown below, this allows for a 50/50 duty cycle on all the notes.
+        <br><br>
+        <img src="stylophone_circuit.png" alt="555 Stylophone">
+        <br><br>
+        The OP-AMP is an LM386, its connected to this 2" speaker, I chose it as it has a rather good frequency response for the frequancy range The stylophone can generate. I went for resistors with 1% tolerance as it wasnt really much more expensive the less precise ones. The Keys are ENIG gold plated.
+        <br><br>
+        I designed a PCB in Kicad and ordered it from JLCPCB, I then soldered all the components and got it working strait away. 
+        <br><br>
+        <img src="stylophone_board.png" alt="555 Stylophone">
+        <br><br>
+        The only real problem I ended up having was with the USB power, I was originally powering the stylophone from a the USB port on a desktop computer, but i noticed a rather audible frequency coming from the speaker when using certain USB power supplies, i ended up having to add some exrta capacitors to the back of the board to filter the power supply and output of the OP-AMP.
+        My friend Jonathan designed a case for it in fusion 360 which I then 3D printed.
+        <br><br>    
+        </p>
+
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/YlewMRt0qdk?si=M3yFDxxR4xy9zbBI" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    
+
+</body>
+</html>
