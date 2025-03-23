@@ -130,7 +130,7 @@ strong{
 }
 
 .project-box {
-    width: 280px;
+    width: 250px; /* Increased size */
     height: 200px; /* Increased size */
     background: #eeeeee;
     padding: 20px;
