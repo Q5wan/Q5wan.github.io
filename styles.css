@@ -253,6 +253,17 @@ strong{
     .project-text p {
         font-size: 18px; /* Slightly smaller for better fit on mobile */
     }
+    .project-box {
+        width: 80%; /* Increased size */
+        height: 200px; /* Increased size */
+        background: #eeeeee;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        text-decoration: none; /* Removes default link styling */
+        color: black;
+        transition: transform 0.3s ease;
+    }
     
 }
 
