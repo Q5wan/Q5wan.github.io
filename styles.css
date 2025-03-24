@@ -224,7 +224,12 @@ strong{
         flex-wrap: wrap;
         gap: 25px;
         margin-top: 30px;
-}
+    }
+    
+    .project-text p {
+        font-size: 20px; /* Slightly smaller for better fit on mobile */
+    }
+
 }
 
 /* On very small screens (max-width: 480px), stack the links */
@@ -235,15 +240,18 @@ strong{
     }
 
     .nav-links a {
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .contact-links a {
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .contact-links p {
-        font-size: 23px;
+        font-size: 20px;
+    }
+    .project-text p {
+        font-size: 18px; /* Slightly smaller for better fit on mobile */
     }
     
 }
