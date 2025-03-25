@@ -55,8 +55,9 @@ body {
 }
 
 .nav-links-notmain a {
+    display: inline-block; /* Ensures transform works */
     font-size: 23px;
-    color: rgb(212, 212, 212);;
+    color: rgb(212, 212, 212);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -70,7 +71,7 @@ body {
 
 .nav-links-notmain a:hover {
     color: #693aa3; /* Add color change on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+    transform: scale(1.1) !important; /* Slight zoom effect */
 }
 
 .page-content {
