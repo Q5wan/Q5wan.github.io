@@ -3,14 +3,14 @@ body {
     overflow-x: auto; /* Prevent horizontal scrolling */
     font-family: "Space Mono", "Courier New", monospace;
     font-weight: 400;
-    
+    background-color: rgb(25, 25, 25);
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #eeeeee;
+    background-color: rgb(38, 38, 38);
     border-radius: 10px;
     width: 100%;
     position: relative; 
@@ -39,7 +39,7 @@ body {
 
 .nav-links a {
     font-size: 23px;
-    color: black;
+    color: rgb(212, 212, 212);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -56,7 +56,7 @@ body {
 
 .nav-links-notmain a {
     font-size: 23px;
-    color: black;
+    color: rgb(212, 212, 212);;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -101,18 +101,18 @@ body {
 
 .page-content p {
     font-size: 18px;
-    color: black;
+    color: rgb(212, 212, 212);;
     margin-bottom: 10px;
 }
 
 p {
     font-size: 15px;
-    color: black;
+    color: rgb(212, 212, 212);
 }
 
 h1 {
     font-size: 27px;
-    color: black;
+    color: rgb(212, 212, 212);
     margin: 0;
 }
 
@@ -128,16 +128,14 @@ strong{
     gap: 25px;
     margin-top: 30px;
 }
-
 .project-box {
-    width: 250px; /* Increased size */
-    height: 200px; /* Increased size */
-    background: #eeeeee;
+    width: 250px;
+    height: 200px;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    text-decoration: none; /* Removes default link styling */
-    color: black;
+    text-decoration: none;
+    background-color: rgb(38, 38, 38) !important; /* Added !important to force the background color */
     transition: transform 0.3s ease;
 }
 
@@ -256,12 +254,10 @@ strong{
     .project-box {
         width: 80%; /* Increased size */
         height: 200px; /* Increased size */
-        background: #eeeeee;
         padding: 20px;
         border-radius: 12px;
         text-align: center;
         text-decoration: none; /* Removes default link styling */
-        color: black;
         transition: transform 0.3s ease;
     }
     
