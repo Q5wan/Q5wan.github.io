@@ -1,6 +1,6 @@
 body {
     height: 100%;
-    overflow-x: auto; /* Prevent horizontal scrolling */
+    overflow-x: auto; 
     font-family: "Space Mono", "Courier New", monospace;
     font-weight: 400;
     background-color: rgb(25, 25, 25);
@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
-    flex-wrap: wrap; /* Allow wrapping to create a new row */
+    flex-wrap: wrap; 
     width: 100%;
 }
 
@@ -45,8 +45,8 @@ body {
 }
 
 .nav-links a:hover {
-    color: #693aa3; /* Add color change on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+    color: #8b51d2; 
+    transform: scale(1.1); 
 }
 
 .center-title {
@@ -55,7 +55,7 @@ body {
 }
 
 .nav-links-notmain a {
-    display: inline-block; /* Ensures transform works */
+    display: inline-block; 
     font-size: 23px;
     color: rgb(212, 212, 212);
     text-decoration: none;
@@ -65,13 +65,13 @@ body {
 .nav-links-notmain {
     position: absolute;
     left: 20px;
-    top: 50%; /* Center vertically */
+    top: 50%;
     transform: translateY(-50%);
 }
 
 .nav-links-notmain a:hover {
-    color: #693aa3; /* Add color change on hover */
-    transform: scale(1.1) !important; /* Slight zoom effect */
+    color: #8b51d2; 
+    transform: scale(1.1) !important; 
 }
 
 .page-content {
@@ -97,7 +97,7 @@ body {
 }
 
 .page-content a:hover {
-    color: #9557e1;
+    color: #8b51d2;
 }
 
 .page-content p {
@@ -136,7 +136,7 @@ strong{
     border-radius: 12px;
     text-align: center;
     text-decoration: none;
-    background-color: rgb(38, 38, 38) !important; /* Added !important to force the background color */
+    background-color: rgb(38, 38, 38) !important;
     transition: transform 0.3s ease;
 }
 
@@ -149,24 +149,26 @@ strong{
 }
 
 .project-box p {
-    font-size: 23px; /* Slightly larger text */
+    font-size: 23px;
     margin-top: 12px;
 }
 
 .project-box:hover {
     transform: scale(1.05);
 }
-.project-box P:hover {
-    color: #693aa3; /* Add color change on hover */
+
+.project-box:hover p {
+    color: #8b51d2; 
 }
+
 
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    border-radius: 15px; /* Adjust the value for more/less rounding */
+    border-radius: 15px;
 }
 
 .video-container iframe {
@@ -175,11 +177,10 @@ strong{
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 15px; /* Apply the same rounding */
+    border-radius: 15px; 
 }
 
-
-/* On mobile screens, two rows for navigation links */
+/*Mobile*/
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column; 
@@ -187,7 +188,7 @@ strong{
         padding-bottom: 10px;
     }
     .nav-links-notmain {
-        position: static; /* Prevents absolute positioning issues */
+        position: static;
         text-align: center;
         margin-top: 10px;
     }
@@ -206,7 +207,7 @@ strong{
 
     .nav-links a {
         font-size: 23px;
-        flex: 1 1 45%; /* Allow the links to take up equal space */
+        flex: 1 1 45%;
         text-align: center;
     }
 
@@ -226,12 +227,12 @@ strong{
     }
     
     .project-text p {
-        font-size: 20px; /* Slightly smaller for better fit on mobile */
+        font-size: 20px;
     }
 
 }
 
-/* On very small screens (max-width: 480px), stack the links */
+/*Mobile Smaller*/
 @media (max-width: 480px) {
     .header-container img {
         width: 80px;
@@ -250,15 +251,15 @@ strong{
         font-size: 20px;
     }
     .project-text p {
-        font-size: 18px; /* Slightly smaller for better fit on mobile */
+        font-size: 18px;
     }
     .project-box {
-        width: 80%; /* Increased size */
-        height: 200px; /* Increased size */
+        width: 80%; 
+        height: 200px; 
         padding: 20px;
         border-radius: 12px;
         text-align: center;
-        text-decoration: none; /* Removes default link styling */
+        text-decoration: none;
         transition: transform 0.3s ease;
     }
     
